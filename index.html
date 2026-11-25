@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Café Roma</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="animaciones.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#inicio" data-screen-link="inicio">☕ Café Roma</a>
+    <nav aria-label="Menú principal">
+      <button class="nav-btn active" data-screen="inicio">Inicio</button>
+      <button class="nav-btn" data-screen="menu">Menú</button>
+      <button class="nav-btn" data-screen="contacto">Contacto</button>
+    </nav>
+  </header>
+  <main>
+    <section id="inicio" class="pantalla activa">
+      <div class="hero">
+        <p class="etiqueta">CAFÉ HECHO CON CARIÑO</p>
+        <h1>Un buen café mejora tu día.</h1>
+        <p>Disfruta café recién preparado y postres caseros en un ambiente acogedor.</p>
+        <button class="btn" data-go="menu">Ver menú</button>
+      </div>
+    </section>
+    <section id="menu" class="pantalla" hidden>
+      <h1>Nuestro menú</h1>
+      <p class="intro">Algo rico para acompañar tu momento.</p>
+      <div class="menu-grid">
+        <article class="menu-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Taza de café espresso" loading="lazy"></div><div class="product-info"><div><h2>Espresso</h2><p>Intenso y recién molido.</p></div><strong class="price">$2.50</strong></div><button class="add-button" data-product="Espresso">Pedir</button></article>
+        <article class="menu-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Café latte con leche cremosa" loading="lazy"></div><div class="product-info"><div><h2>Latte</h2><p>Espresso con leche cremosa.</p></div><strong class="price">$3.50</strong></div><button class="add-button" data-product="Latte">Pedir</button></article>
+        <article class="menu-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Pastel de chocolate del día" loading="lazy"></div><div class="product-info"><div><h2>Pastel del día</h2><p>Hecho fresco cada mañana.</p></div><strong class="price">$4.00</strong></div><button class="add-button" data-product="Pastel del día">Pedir</button></article>
+      </div>
+    </section>
+    <section id="contacto" class="pantalla" hidden>
+      <h1>Visítanos</h1>
+      <p class="contact-intro">Nos encantará recibirte para compartir un café.</p>
+      <div class="contact-details">
+        <p class="detail-item"><strong>Dirección</strong><small>Calle Roma 123, Centro</small></p>
+        <p class="detail-item"><strong>Horario</strong><small>Lunes a sábado, 8:00–20:00</small></p>
+        <p class="detail-item"><strong>Teléfono</strong><small><a href="tel:+1234567890">+123 456 7890</a></small></p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">© <span id="current-year"></span> Café Roma · Hecho con cariño</footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
